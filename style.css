@@ -1,0 +1,368 @@
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Estilos da Navbar */
+.navbar {
+    background-color: #48A4F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+
+
+/* banner */
+
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container do banner */
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.banner-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.banner-image {
+    flex: 1;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+h1, p {
+    margin: 0;
+}
+
+
+/* Conteúdo do banner */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00bfff; }
+    50% { text-shadow: 0 0 20px #00bfff; }
+    100% { text-shadow: 0 0 5px #00bfff; }
+}
+
+.animated-text {
+    font-size: 24px;
+    text-align: right;
+    font-weight: bold;
+    color: #00bfff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #00bfff;
+    width: 0;
+    display: inline-block;
+    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+}
+
+.glow {
+    animation: glow 2s infinite;
+}
+
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Botão de agendamento */
+.btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #008c9e;
+}
+
+
+/* cards */
+
+.about-section {
+    padding: 60px 20px;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+.title-style {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.service-box i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+.service-box h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.service-box p {
+    color: #555;
+}
+
+.service-image {
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover; 
+    margin-bottom: 15px; 
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Sobre a página */
+
+.about-section, .stats-section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.title-style {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-box h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.counter {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.count-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.stats-text {
+    background-image: url('experiencia-do-paciente-cuidados.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: auto;
+    padding: 100px; 
+    color: black; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  /* footer */
+
+  .footer {
+    background-color: #48A4F7;
+    color: white;
+    padding: 40px 0;
+}
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li {
+    margin: 8px 0;
+}
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-section ul li a:hover {
+    color: #f1c40f;
+}
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer-social a:hover {
+    color: #f39c12;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
