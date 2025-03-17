@@ -8,40 +8,115 @@ body {
 }
 
 /* Estilos da Navbar */
-.navbar {
-    background-color: #48A4F7;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 6rem;
 }
 
-.navbar .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
+.logo {
     display: flex;
-    margin: 0;
+    align-items: center;
 }
 
-.nav-links li {
-    margin-left: 20px;
+.logo h1 {
+    color: #fff;
 }
 
-.nav-links a {
-    color: white;
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
 }
 
-.nav-links a:hover {
-    color: #f39c12;
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0187a7;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
 }
 
 
@@ -57,7 +132,7 @@ body {
 }
 
 /* Container do banner */
-.banner-container {
+/* .banner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,7 +159,7 @@ h1, p {
 }
 
 
-/* Conteúdo do banner */
+
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -126,7 +201,7 @@ h1, p {
 .banner-content p {
     font-size: 18px;
     margin-bottom: 20px;
-}
+} */
 
 /* Botão de agendamento */
 .btn {
@@ -295,7 +370,7 @@ h1, p {
 }
 
 .stats-text {
-    background-image: url('experiencia-do-paciente-cuidados.jpg'); 
+    background-image: url('./img/experiencia-do-paciente-cuidados.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -365,4 +440,47 @@ h1, p {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 1px solid #555;
+}
+
+@media (max-width: 1200px) {
+    .footer-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        width: 100%;
+        flex-direction: column; /* Muda o layout para coluna em telas menores */
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: none;
+        min-width: 100%;
+        margin: 15px 0; /* Ajuste de margem para ficar mais compacta em telas menores */
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h4 {
+        font-size: 18px; /* Diminui o tamanho do título em telas muito pequenas */
+    }
+
+    .footer-social a {
+        font-size: 18px; /* Diminui o tamanho dos ícones sociais */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Ajuste para texto menor no rodapé */
+    }
 }
