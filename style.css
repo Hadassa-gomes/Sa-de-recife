@@ -31,9 +31,13 @@ header {
     align-items: center;
 }
 
-.logo h1 {
-    color: #fff;
+.logo img {
+    width: 80px;  /* Defina o tamanho fixo desejado para a logo */
+    height: auto;  /* Mantém a proporção da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha em layouts flex */
 }
+
+
 
 .nav-list {
     display: flex;
