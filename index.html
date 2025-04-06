@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>Document</title>
+    <script src="index.js" defer></script>
+    <title>Saúde Recife</title>
 </head>
 <body>
-    <!-- nav-bar -->
+    <!-- Nav-Bar -->
     <header>
         <nav class="nav-bar">
             <div class="logo">
                 <a href="#">
-                     <img src="./img/Saúde_Recife sf.png" alt="Logo"> 
+                    <img src="./img/Saúde_Recife sf.png" alt="Logo">
+                </a>
             </div>
             <div class="nav-list">
                 <ul>
                     <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"> Sobre</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
                 </ul>
             </div>
             <div class="login-button">
@@ -27,7 +28,9 @@
             </div>
 
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="./img/menu_white_36dp.svg" alt=""></button>
+                <button onclick="menuShow()">
+                    <img class="icon" src="./img/menu_white_36dp.svg" alt="Menu Icon">
+                </button>
             </div>
         </nav>
         <div class="mobile-menu">
@@ -36,140 +39,152 @@
                 <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
             </ul>
-
             <div class="login-button">
                 <button><a href="#">Entrar</a></button>
             </div>
         </div>
     </header>
 
-    
-<!-- banner -->
-    <!-- <section class="banner-container">
-        <div class="banner-content">
-            <h1><span class="animated-text">Encontre serviços de saúde pública no Recife</span></h1>
-            <p class="glow">de forma fácil e rápida! </p>
+    <!-- Container Home Page -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="image-container">
+                        <img src="./img/foto homepage.png" alt="Illustration">
+                    </div>
+                    <div class="text-container">
+                        <h1 class="heading">
+                            Bem vindo ao <span class="text-primary">Saúde Recife</span>.<br>
+                            Sua saúde em primeiro lugar.
+                        </h1>
+                        <p class="lead">
+                            Mapeie, conheça e acesse os serviços de saúde disponíveis na sua região com praticidade e confiança.
+                        </p>
+                        <div class="buttons">
+                            <a href="overview.html" class="btn btn-primary">
+                                View all pages <i class="arrow">&#8594;</i>
+                            </a>
+                            <a href="docs/index.html" class="btn btn-subtle">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cards Section -->
+    <section class="about-section">
+        <div class="container">
+            <h3 class="title-style">Saúde ao seu alcance, <span style="color: #28a745;">todos os dias!</span></h3>
+            <div class="services">
+                <div class="service-box">
+                    <img src="./img/saude-mental.png" alt="Imagem de saúde mental" class="service-image">
+                    <i class="fas fa-tooth"></i>
+                    <h5>Saúde Mental</h5>
+                    <p>Encontre apoio psicológico e serviços de saúde mental perto de você.</p>
+                    <a href="saude-mental.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+                <div class="service-box">
+                    <img src="./img/saude-publica.png" alt="Imagem de saúde pública" class="service-image">
+                    <i class="fas fa-wheelchair"></i>
+                    <h5>Atenção básica</h5>
+                    <p>Encontre uma Unidade Básica de saúde perto de você.</p>
+                    <a href="saude-publica.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+                <div class="service-box">
+                    <img src="./img/hospital.png" alt="Imagem de hospital" class="service-image">
+                    <i class="fas fa-user-md"></i>
+                    <h5>Hospitais</h5>
+                    <p>Encontre um hospital perto de você.</p>
+                    <a href="hospitais.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+                <div class="service-box">
+                    <img src="./img/teste-de-sangue.png" alt="Imagem de teste de sangue" class="service-image">
+                    <i class="fas fa-teeth-open"></i>
+                    <h5>Centro de testagem</h5>
+                    <p>Encontre um centro de testagem perto de você.</p>
+                    <a href="centro-testagem.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+                <div class="service-box">
+                    <img src="./img/familia.png" alt="Imagem de unidade de saúde da família" class="service-image">
+                    <i class="fas fa-crutch"></i>
+                    <h5>Unidade de saúde da família</h5>
+                    <p>Encontre uma unidade de saúde da família perto de você.</p>
+                    <a href="saude-familia.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+                <div class="service-box">
+                    <img src="./img/edificio-hospitalar.png" alt="Imagem de políclinica" class="service-image">
+                    <i class="fas fa-teeth"></i>
+                    <h5>Políclinica</h5>
+                    <p>Encontre uma Políclinica perto de você.</p>
+                    <a href="policlinica.html" class="saiba-mais-btn">Saiba Mais</a>
+                </div>
+            </div>
+            <a href="#" class="mais-servico-bnt">Mais Serviços</a>
         </div>
-        <div class="banner-image"> -->
-            <!-- <img src="./img/foto homepage.png" alt="Imagem de saúde"> -->
-        <!-- </div>
-    </section> -->
+    </section>
 
-    <!-- <script src="script.js"></script>  -->
-
-    
-<!-- Cards -->
-
-<section class="about-section">
-    <div class="container">
-        <h3 class="title-style">Saúde ao seu alcance, <span style="color: #28a745;"> todos os dias!</span></h3>
-        <div class="services">
-            <div class="service-box">
-                <img src="./img/saude-mental.png" alt="Imagem de saúde mental" class="service-image">
-                <i class="fas fa-tooth"></i>
-                <h5>Saúde Mental</h5>
-                <p> Encontre apoio psicológico e serviços de saúde mental perto de você. </p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
+    <!-- Sobre a Página -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stats-text">
+                <h5>Estamos comprometidos em conectar você aos serviços de saúde que precisa, de forma fácil e acessível.</h5>
+                <p>Com a Saúde Recife, você encontra unidades de atendimento, especialidades médicas e serviços essenciais próximos à sua residência, garantindo mais praticidade no seu dia a dia.</p>
+                <p>Nosso objetivo é facilitar seu acesso à saúde, oferecendo informações confiáveis para que você tenha o cuidado que merece.</p>
+                <a href="about.html" class="btn btn-style">Saiba mais</a>
             </div>
-            <div class="service-box">
-                <img src="./img/saude-publica.png" alt="Imagem de saúde pública" class="service-image">
-                <i class="fas fa-wheelchair"></i>
-                <h5>Atenção básica</h5>
-                <p>Encontre uma Unidade Básica de saúde perto de você.</p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
-            </div>
-            <div class="service-box">
-                <img src="./img/hospital.png" alt="Imagem de saúde mental" class="service-image">
-                <i class="fas fa-user-md"></i>
-                <h5>Hospitais</h5>
-                <p>Encontre um hospital perto de você.</p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
-            </div>
-            <div class="service-box">
-                <img src="./img/teste-de-sangue.png" alt="Imagem de saúde mental" class="service-image">
-                <i class="fas fa-teeth-open"></i>
-                <h5>Centro de testagem</h5>
-                <p>Encontre um centro de testagem perto de você.</p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
-            </div>
-            <div class="service-box">
-                <img src="./img/familia.png" alt="Imagem de saúde mental" class="service-image">
-                <i class="fas fa-crutch"></i>
-                <h5> Unidade de saúde da família</h5>
-                <p>Encontre uma unidade de saúde da família perto de você.</p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
-            </div>
-            <div class="service-box">
-                <img src="./img/edificio-hospitalar.png" alt="Imagem de saúde mental" class="service-image">
-                <i class="fas fa-teeth"></i>
-                <h5>Políclinica</h5>
-                <p>Encontre uma Políclinica perto de você.</p>
-                <a href="saude mental.html" class="saiba-mais-btn">Saiba Mais</a>
-            </div>
-        </div>
-        <a href="#" class="btn">Mais Serviços</a>
-    </div>
-</section>
-
-
-<!-- sobre a página -->
-
-<section class="stats-section">
-    <div class="container stats-container">
-        <div class="stats-text">
-            <h5>Estamos comprometidos em conectar você aos serviços de saúde que precisa, de forma fácil e acessível.</h5>
-            <p>Com a Saúde Recife, você encontra unidades de atendimento, especialidades médicas e serviços essenciais próximos à sua residência, garantindo mais praticidade no seu dia a dia.</p>
-            <p>Nosso objetivo é facilitar seu acesso à saúde, oferecendo informações confiáveis para que você tenha o cuidado que merece.</p>
-            <a href="about" class="btn btn-style">Saiba mais</a>
-        </div>
-        <div class="stats">
-            <div class="counter">
-                <div class="count-number" data-to="6370" data-speed="1500">250</div>
-                <p>Equipamentos de saúde</p>
-            </div>
-            <div class="counter">
-                <div class="count-number" data-to="36" data-speed="1500">118</div>
-                <p>Unidades de saúde</p>
-            </div>
-            <div class="counter">
-                <div class="count-number" data-to="7600" data-speed="1500">94</div>
-                <p>bairros possuem serviços de saúde</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h4>Contato</h4>
-            <p><strong>Endereço:</strong> Rua Exemplo, 123, Recife - PE</p>
-            <p><strong>Telefone:</strong> (81) 99999-9999</p>
-            <p><strong>Email:</strong> contato@exemplo.com</p>
-        </div>
-        <div class="footer-section">
-            <h4>Links Rápidos</h4>
-            <ul>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Ajuda</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h4>Redes Sociais</h4>
-            <div class="footer-social">
-                <a href="#" title="Facebook">&#xf09a;</a>
-                <a href="#" title="Twitter">&#xf099;</a>
-                <a href="#" title="Instagram">&#xf16d;</a>
-                <a href="#" title="LinkedIn">&#xf08c;</a>
+            <div class="stats">
+                <div class="counter">
+                    <div class="count-number" data-to="6370" data-speed="1500">250</div>
+                    <p>Equipamentos de saúde</p>
+                </div>
+                <div class="counter">
+                    <div class="count-number" data-to="36" data-speed="1500">118</div>
+                    <p>Unidades de saúde</p>
+                </div>
+                <div class="counter">
+                    <div class="count-number" data-to="7600" data-speed="1500">94</div>
+                    <p>Bairros com serviços de saúde</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Saúde Recife. Todos os direitos reservados.</p>
-    </div>
-</footer>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p><strong>Endereço:</strong> Rua Exemplo, 123, Recife - PE</p>
+                <p><strong>Telefone:</strong> (81) 99999-9999</p>
+                <p><strong>Email:</strong> contato@exemplo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="footer-social">
+                    <a href="#" title="Facebook">&#xf09a;</a>
+                    <a href="#" title="Twitter">&#xf099;</a>
+                    <a href="#" title="Instagram">&#xf16d;</a>
+                    <a href="#" title="LinkedIn">&#xf08c;</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Saúde Recife. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script-1.js" defer></script>
 </body>
 </html>
-<script src="script 1.js"></script>
