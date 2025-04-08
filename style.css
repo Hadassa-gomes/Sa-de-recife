@@ -16,7 +16,7 @@ body {
 
 /* Estilos do Header */
 header {
-    background-color: #FAF0E6;
+    background-color: #48A4F7 ;
     box-shadow: 0px 3px 10px #464646;;
     position: relative;
 }
@@ -373,7 +373,7 @@ header {
 }
 
 
-}
+
 
 @media (max-width: 768px) {
     .container {

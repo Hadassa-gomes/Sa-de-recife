@@ -8,18 +8,42 @@
 </head>
 <body>
 
- <!-- nav-bar -->
- <nav class="navbar">
-    <div class="logo">
-        <a href="#">Meu Logo</a>
+ <!-- Nav-Bar -->
+ <header>
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#">
+                <img src="./img/saude_recife_logo.png.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
+
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+                <img class="icon" src="./img/menu_white_36dp.svg" alt="Menu Icon">
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        </ul>
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
     </div>
-    <ul class="nav-links">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#services">Serviços</a></li>
-        
-    </ul>
-</nav>
+</header>
 
 
     <div class="container">
