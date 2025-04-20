@@ -142,6 +142,8 @@ header {
     overflow: hidden;
     margin: 40px auto; 
     padding: 20px; 
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .image-section {
     width: 50%;

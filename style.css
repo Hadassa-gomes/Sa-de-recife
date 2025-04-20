@@ -319,17 +319,32 @@ header {
     padding: 60px 20px;
 }
 
+.stats-section .container {
+    width: 100%;
+    max-width: 300%;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+
 .stats-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+   
 }
 
 .stats-text {
     flex: 1;
     text-align: left;
     padding: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    max-width: 900px;
+    
 }
 
 .stats {
@@ -353,24 +368,7 @@ header {
     color: #007bff;
 }
 
-.stats-text {
-    /* background-image: url('./img/experiencia-do-paciente-cuidados.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: auto;
-    padding: 100px;
-    color: black;
 
-    background: linear-gradient(
-        to bottom, 
-        rgba(72, 164, 247, 0.9), /* Azul com 90% de opacidade */
-        rgba(255, 255, 255, 0.9) /* Branco com 90% de opacidade */
-    );
-    padding: 100px;
-    color: #000;
-    border-radius: 10px;
-}
 
 
 
