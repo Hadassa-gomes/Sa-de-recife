@@ -3,21 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Aplicando fonte global */
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f8f9fa;
     text-align: center;
 }
 
 /* Estilos do Header */
 header {
-    background-color: #48A4F7 ;
-    box-shadow: 0px 3px 10px #464646;;
+    background-color: #48A4F7;
+    box-shadow: 0px 3px 10px #464646;
     position: relative;
 }
 
@@ -25,10 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 6rem;
-}
-
-.logo {
-    display: flex;
     align-items: center;
 }
 
@@ -45,12 +43,8 @@ header {
 
 .nav-list ul {
     display: flex;
-    justify-content: center;
     list-style: none;
-}
-
-.nav-item {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 .nav-link {
@@ -81,77 +75,27 @@ header {
 
 .mobile-menu {
     display: none;
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-
-    .nav-item {
-        display: none;
-    }
-
-    .login-button {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-    }
-
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-    }
-
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-
-    .open {
-        display: block;
-    }
+.open {
+    display: block;
 }
 
-/* Estilos da Seção Principal (Home) */
+/* Seção Principal */
 .section {
     padding: 4rem 20px;
-    display:flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
     display: flex;
-    justify-content: space-between; /* Distribui os itens com espaço entre */
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-@media (min-width: 768px) {
-    .section {
-        padding-top: 6rem;
-    }
 }
 
 .image-container {
@@ -161,15 +105,9 @@ header {
 
 .image-container img {
     width: 100%;
-    max-width: 150%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .image-container {
-        margin-bottom: 0;
-    }
 }
 
 .text-container {
@@ -178,7 +116,6 @@ header {
 
 .heading {
     font-size: 2.5rem;
-    text-align: center;
     color: #333;
 }
 
@@ -189,23 +126,10 @@ header {
 .lead {
     font-size: 1.25rem;
     color: #6c757d;
-    text-align: center;
     margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
-    .heading {
-        font-size: 3.5rem;
-        text-align: left;
-    }
-
-    .lead {
-        text-align: left;
-        margin-bottom: 3rem;
-    }
-}
-
-/* Estilos dos Botões */
+/* Botões */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -244,9 +168,9 @@ header {
     margin-left: 10px;
 }
 
-/* Cards de Serviço */
+/* Serviços */
 .about-section {
-    padding: 60px 20px;
+    padding: 60px 5%;
 }
 
 .title-style {
@@ -293,47 +217,24 @@ header {
     margin-bottom: 15px;
 }
 
-/* .service-box .saiba-mais-btn {
+.mais-servico-bnt {
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     background: #007bff;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-} */
-
-.mais-servico-bnt{
-    margin-top: 10px;
-    padding: 10px;
-    background: #007bff; 
-    color: white;
     border-radius: 5px;
 }
 
-
-
-
-
-/* Estilos da Seção de Estatísticas */
+/* Estatísticas */
 .stats-section {
-    padding: 60px 20px;
+    padding: 60px 5%;
 }
-
-.stats-section .container {
-    width: 100%;
-    max-width: 300%;
-    padding: 10px;
-    margin: 10px;
-    
-}
-
 
 .stats-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .stats-text {
@@ -344,7 +245,6 @@ header {
     letter-spacing: 0.5px;
     line-height: 1.6;
     max-width: 900px;
-    
 }
 
 .stats {
@@ -368,18 +268,7 @@ header {
     color: #007bff;
 }
 
-
-
-
-
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
-
-/* Estilos do Footer */
+/* Footer */
 .footer {
     background-color: #48A4F7;
     color: white;
@@ -445,13 +334,59 @@ header {
     border-top: 1px solid #555;
 }
 
-@media (max-width: 1200px) {
-    .footer-container {
-        width: 90%;
-    }
-}
-
+/* RESPONSIVIDADE */
+/* Tablet e menores */
 @media (max-width: 768px) {
+    .nav-bar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-item,
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .lead {
+        text-align: center;
+        font-size: 1rem;
+    }
+
     .footer-container {
         width: 100%;
         flex-direction: column;
@@ -460,30 +395,66 @@ header {
 
     .footer-section {
         flex: none;
-        min-width: 100%;
-        margin: 15px 0;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 30px;
     }
 
     .footer-social {
         justify-content: center;
-        margin-top: 20px;
     }
 
-    .footer-bottom {
-        padding-top: 20px;
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stats-text {
+        text-align: center;
     }
 }
 
+/* Celulares pequenos */
 @media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+
     .footer-section h4 {
         font-size: 18px;
     }
 
     .footer-social a {
         font-size: 18px;
-    }
-
-    .footer-bottom {
-        font-size: 14px;
     }
 }

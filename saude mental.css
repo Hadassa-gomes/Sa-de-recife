@@ -132,7 +132,6 @@ header {
     }
 }
 
-
 .container {
     display: flex;
     max-width: 900px;
@@ -143,12 +142,21 @@ header {
     margin: 40px auto; 
     padding: 20px; 
     box-sizing: border-box;
+    overflow: hidden;
 }
 .image-section {
     width: 50%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .image-section img {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
@@ -182,15 +190,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
+
 .text {
     margin-bottom: 5px;
     font-size: 18px;
 }
 
-
- .input-group {
+.input-group {
     text-align: center;
     margin-top: 20px;
 }
@@ -208,19 +215,6 @@ header {
     border-radius: 5px;
     font-size: 16px;
 }
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text-section {
-        max-width: 100%;
-    }
-}
-
 
 .footer {
     background-color: #48A4F7;
@@ -300,3 +294,88 @@ input[type="text"] {
     background-color: #0056b3;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-section, .text-section {
+        width: 100%;
+    }
+
+    .image-section {
+        height: auto;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .text-section {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-bar {
+        padding: 1rem 2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .login-button button a {
+        font-size: 1rem;
+    }
+
+    .text-section h3 {
+        font-size: 1.4rem;
+    }
+
+    .text-section p,
+    .text-section ul li {
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .saiba-mais-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+}
