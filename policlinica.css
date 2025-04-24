@@ -216,6 +216,18 @@ header {
     font-size: 16px;
 }
 
+#resultado-servico {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+.servico-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
 .footer {
     background-color: #48A4F7;
     color: white;
