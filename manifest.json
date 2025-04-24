@@ -1,7 +1,7 @@
 {
     "name": "Saúde Recife",
     "short_name": "AppSauderec",
-    "start_url": ".",
+    "start_url": "/Sa-de-recife/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0d47a1",
