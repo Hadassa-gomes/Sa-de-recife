@@ -7,7 +7,7 @@
     "theme_color": "#0d47a1",
     "icons": [
       {
-        "src": "saude_recife_logo.png.png",
+        "src": "./img/saude_recife_logo.png.png",
         "sizes": "192x192",
         "type": "image/png"
       }
