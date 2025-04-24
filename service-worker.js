@@ -1,13 +1,12 @@
 const CACHE_NAME = 'saude-recife-cache-v1';  // Nome do cache
 const urlsToCache = [
-  '/',  // Página inicial
-  '/index.html',  // Página HTML
-  '/manifest.json',  // Manifesto do PWA
-  '/style.css',  // Arquivo CSS
-  '/img/saude_recife_logo.png',  // Ícone ou logo
-  '/js/main.js',  // Script principal
-  '/img/foto homepage.png',  // Outras imagens
-  // Adicione mais arquivos estáticos conforme necessário
+  '/Sa-de-recife/',  // Página inicial
+  '/Sa-de-recife/index.html',
+  '/Sa-de-recife/style.css',
+  '/Sa-de-recife/manifest.json',
+  '/Sa-de-recife/js/main.js',
+  '/Sa-de-recife/img/saude_recife_logo.png',
+  '/Sa-de-recife/img/foto%20homepage.png' // cuidado com espaços no nome do arquivo
 ];
 
 // Instalando o Service Worker
