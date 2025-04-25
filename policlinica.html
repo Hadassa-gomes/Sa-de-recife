@@ -114,44 +114,46 @@
         </div>
     </footer>
 
-    <script>
+     <script>
         function buscarServico() {
-            const bairro = document.getElementById('bairro').value.trim().toLowerCase();
-            const resultadoDiv = document.getElementById('resultado-servico');
-    
-            // Limpa conteúdo anterior
-            resultadoDiv.innerHTML = '';
-    
-            if (!bairro) {
-                resultadoDiv.innerHTML = '<p>Por favor, digite um bairro válido.</p>';
-                return;
+    const bairro = document.getElementById('bairro').value.trim().toLowerCase();
+    const resultadoDiv = document.getElementById('resultado-servico');
+
+    // Limpa conteúdo anterior
+    resultadoDiv.innerHTML = '';
+
+    if (!bairro) {
+        resultadoDiv.innerHTML = '<p>Por favor, digite um bairro válido.</p>';
+        return;
+    }
+
+    // Realiza a busca na API
+    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/policlinica/${encodeURIComponent(bairro)}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Serviço não encontrado');
             }
-    
-            fetch(`https://sua-api-no-render.com/api/caps/${bairro}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Serviço não encontrado');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.length === 0) {
-                        resultadoDiv.innerHTML = '<p>Nenhum servico encontrado neste bairro.</p>';
-                    } else {
-                        const html = data.map(caps => `
-                            <div class="caps-item">
-                                <h4>${caps.nome}</h4>
-                                <p><strong>Endereço:</strong> ${servico.endereco}</p>
-                                <p><strong>Telefone:</strong> ${servico.telefone}</p>
-                            </div>
-                        `).join('');
-                        resultadoDiv.innerHTML = html;
-                    }
-                })
-                .catch(error => {
-                    resultadoDiv.innerHTML = `<p>Erro: ${error.message}</p>`;
-                });
-        }
+            return response.json();
+        })
+        .then(data => {
+            if (data.length === 0) {
+                resultadoDiv.innerHTML = '<p>Nenhum serviço encontrado neste bairro.</p>';
+            } else {
+                // Exibe os resultados
+                const html = data.map(policlinica => `
+                    <div class="policlinica-item">
+                        <h4>${policlinica.nome}</h4>
+                        <p><strong>Endereço:</strong> ${policlinica.endereco}</p>
+                        <p><strong>Telefone:</strong> ${policlinica.telefone || 'Não informado'}</p>
+                    </div>
+                `).join('');
+                resultadoDiv.innerHTML = html;
+            }
+        })
+        .catch(error => {
+            resultadoDiv.innerHTML = `<p>Erro: ${error.message}</p>`;
+        });
+}
     </script>
     
 
