@@ -108,5 +108,47 @@
         </div>
     </footer>
 
+     <script>
+        function buscarServico() {
+    const bairro = document.getElementById('bairro').value.trim().toLowerCase();
+    const resultadoDiv = document.getElementById('resultado-servico');
+
+    // Limpa conteúdo anterior
+    resultadoDiv.innerHTML = '';
+
+    if (!bairro) {
+        resultadoDiv.innerHTML = '<p>Por favor, digite um bairro válido.</p>';
+        return;
+    }
+
+    // Realiza a busca na API
+    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/hospitais/${encodeURIComponent(bairro)}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Serviço não encontrado');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.length === 0) {
+                resultadoDiv.innerHTML = '<p>Nenhum serviço encontrado neste bairro.</p>';
+            } else {
+                // Exibe os resultados
+                const html = data.map(hospitais => `
+                    <div class="hospitais-item">
+                        <h4>${hospitais.nome}</h4>
+                        <p><strong>Endereço:</strong> ${hospitais.endereco}</p>
+                        <p><strong>Telefone:</strong> ${hospitais.telefone || 'Não informado'}</p>
+                    </div>
+                `).join('');
+                resultadoDiv.innerHTML = html;
+            }
+        })
+        .catch(error => {
+            resultadoDiv.innerHTML = `<p>Erro: ${error.message}</p>`;
+        });
+}
+    </script>
+
 </body>
 </html>
