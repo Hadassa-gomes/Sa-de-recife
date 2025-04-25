@@ -11,7 +11,7 @@ function menuShow() {
 
 // Função para buscar os serviços com base no tipo e bairro
 function buscarServicos(tipo, bairro) {
-  const url = `https://back-end-saude-recife-1.onrender.com/api/servicos/${tipo}/${bairro}`;
+  const url = `https://back-end-saude-recife-1.onrender.com/api/servicos/${encodeURIComponent(tipo)}/${encodeURIComponent(bairro)}`;;
   
   // Usando fetch para buscar os dados da API
   fetch(url)
