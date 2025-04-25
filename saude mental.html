@@ -119,7 +119,8 @@
                 return;
             }
     
-            fetch(`https://back-end-saude-recife-1.onrender.com/api/caps/${bairro}`)
+            fetch(`fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/caps/${encodeURIComponent(bairro)}`)
+`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Serviço não encontrado');
