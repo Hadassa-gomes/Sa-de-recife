@@ -122,7 +122,7 @@
     }
 
     // Realiza a busca na API
-    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/hospitais/${encodeURIComponent(bairro)}`)
+    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/hospital/${encodeURIComponent(bairro)}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Serviço não encontrado');
@@ -134,11 +134,11 @@
                 resultadoDiv.innerHTML = '<p>Nenhum serviço encontrado neste bairro.</p>';
             } else {
                 // Exibe os resultados
-                const html = data.map(hospitais => `
-                    <div class="hospitais-item">
+                const html = data.map(hospital => `
+                    <div class="hospital-item">
                         <h4>${hospitais.nome}</h4>
-                        <p><strong>Endereço:</strong> ${hospitais.endereco}</p>
-                        <p><strong>Telefone:</strong> ${hospitais.telefone || 'Não informado'}</p>
+                        <p><strong>Endereço:</strong> ${hospital.endereco}</p>
+                        <p><strong>Telefone:</strong> ${hospital.telefone || 'Não informado'}</p>
                     </div>
                 `).join('');
                 resultadoDiv.innerHTML = html;
