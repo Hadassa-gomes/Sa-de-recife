@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="usf.css">
+    <link rel="stylesheet" href="centrotestagem.css">
     <title>Document</title>
 </head>
 <body>
@@ -48,20 +48,19 @@
 
     <div class="container">
         <div class="image-section">
-            <img src="./img/unidade saude da familia rec.jpg" alt="Imagem do serviço">
+            <img src="./img/centro testagem recife.jpg" alt="Imagem do serviço">
         </div>
         <div class="text-section">
-            <h3>Unidades de Saúde da Família (USF) - Recife</h3>
-            <p>As Unidades de Saúde da Família (USF) fazem parte da Atenção Básica do SUS e atuam de forma próxima à comunidade, oferecendo cuidados contínuos e integrados para a promoção da saúde e prevenção de doenças.</p>
-            <ul>
-                <li>Atendimento médico e de enfermagem voltado para a saúde da família</li>
-                <li>Acompanhamento de gestantes, crianças, idosos e pessoas com doenças crônicas</li>
-                <li>Vacinação e atualização do cartão de vacinas</li>
-                <li>Atendimento odontológico básico</li>
-                <li>Visitas domiciliares realizadas por Agentes Comunitários de Saúde</li>
-                <li>Educação em saúde e atividades de promoção do bem-estar</li>
-                <li>Encaminhamentos para serviços especializados quando necessário</li>
-            </ul>
+            <h3>Centros de Testagem </h3>
+<p>Os Centros de Testagem e Aconselhamento (CTA) da rede municipal de Recife oferecem serviços gratuitos e sigilosos para a detecção de infecções sexualmente transmissíveis (ISTs), promovendo prevenção, diagnóstico precoce e orientação especializada.</p>
+<ul>
+    <li>Testagem rápida para HIV, sífilis e hepatites B e C</li>
+    <li>Aconselhamento individual antes e após o teste</li>
+    <li>Encaminhamento para tratamento e acompanhamento em caso de resultado positivo</li>
+    <li>Distribuição gratuita de preservativos e material educativo</li>
+    <li>Atendimento sigiloso, humanizado e sem necessidade de agendamento</li>
+    <li>Ações educativas e de prevenção em comunidades e eventos públicos</li>
+</ul>
         </div>
     </div>
 
@@ -108,7 +107,8 @@
         </div>
     </footer>
 
-     <script>
+
+    <script>
         function buscarServico() {
     const bairro = document.getElementById('bairro').value.trim().toLowerCase();
     const resultadoDiv = document.getElementById('resultado-servico');
@@ -122,7 +122,7 @@
     }
 
     // Realiza a busca na API
-    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/ufs/${encodeURIComponent(bairro)}`)
+    fetch(`https://back-end-saude-recife-1.onrender.com/api/servicos/centrode testagem/${encodeURIComponent(bairro)}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Serviço não encontrado');
@@ -134,11 +134,11 @@
                 resultadoDiv.innerHTML = '<p>Nenhum serviço encontrado neste bairro.</p>';
             } else {
                 // Exibe os resultados
-                const html = data.map(ufs => `
-                    <div class="ufs-item">
-                        <h4>${ufs.nome}</h4>
-                        <p><strong>Endereço:</strong> ${ufs.endereco}</p>
-                        <p><strong>Telefone:</strong> ${ufs.telefone || 'Não informado'}</p>
+                const html = data.map(centrodetestagem => `
+                    <div class="centrotestagem-item">
+                        <h4>${centrodetestagem.nome}</h4>
+                        <p><strong>Endereço:</strong> ${centrodetestagem.endereco}</p>
+                        <p><strong>Telefone:</strong> ${centrodetestagem.telefone || 'Não informado'}</p>
                     </div>
                 `).join('');
                 resultadoDiv.innerHTML = html;
@@ -150,6 +150,7 @@
 }
     </script>
 
+    
 
 
 </body>
